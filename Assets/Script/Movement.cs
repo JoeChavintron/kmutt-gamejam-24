@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
     public void OnDrag()
     {
         _currentSpeed = draggingSpeed;
-        drawLineController.isDraw = true;
+        drawLineController.StartDraw();
     }
 
     public void OnStopDrag()
