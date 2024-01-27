@@ -17,14 +17,12 @@ namespace Script
         
             if (context.performed)
             {
-                Debug.Log("OnStartDrag");
                 startDrag?.Invoke();    
             }
 
             if (context.canceled)
             {
-                Debug.Log("OnStopDrag");
-                startDrag?.Invoke();
+                stopDrag?.Invoke();
             }
         }
     }

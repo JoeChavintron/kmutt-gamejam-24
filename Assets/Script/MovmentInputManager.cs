@@ -20,7 +20,6 @@ public class MovmentInputManager : MonoBehaviour
 
         if (context.canceled)
         {
-            Debug.Log("OnStopMove");
             stopMoveEvent?.Invoke();
         }
     }

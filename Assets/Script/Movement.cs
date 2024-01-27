@@ -54,6 +54,7 @@ public class Movement : MonoBehaviour
 
     public void OnStopDrag()
     {
+        Debug.Log("stop drag");
         _currentSpeed = originSpeed;
         drawLineController.isDraw = false;
     }
