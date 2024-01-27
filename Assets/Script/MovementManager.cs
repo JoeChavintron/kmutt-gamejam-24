@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
     
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("OnMove");
+        
         if (context.performed)
         {
             moveEvent?.Invoke(context.ReadValue<Vector2>());    
@@ -20,6 +20,7 @@ public class InputManager : MonoBehaviour
 
         if (context.canceled)
         {
+            Debug.Log("OnStopMove");
             stopMoveEvent?.Invoke();
         }
     }
