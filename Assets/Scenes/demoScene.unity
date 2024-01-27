@@ -271,10 +271,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 884891317}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: OnDrag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   stopDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 884891317}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: OnStopDrag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &383912096
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5311a296bea4a68a20ea4c6be84229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  originSpeed: 10
+  draggingSpeed: 2
   body: {fileID: 383912102}
 --- !u!1 &963194225
 GameObject:

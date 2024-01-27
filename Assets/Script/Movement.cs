@@ -1,15 +1,25 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Movement : MonoBehaviour
 {
     private bool _isMoving;
     private Vector2 _direction;
 
-    public float speed = 100f;
+    public float originSpeed = 10f;
+    public float draggingSpeed = 5;
+    
+    private float _currentSpeed;
 
     public Rigidbody body;
-    
+
+    private void Start()
+    {
+        _currentSpeed = originSpeed;
+    }
+
     private void Update()
     {
         if (!_isMoving)
@@ -17,7 +27,8 @@ public class Movement : MonoBehaviour
             body.velocity = Vector3.zero;
             return;
         }
-        body.velocity = new Vector3(_direction.x*speed, 0, _direction.y*speed);
+
+        body.velocity = new Vector3(_direction.x * _currentSpeed, 0, _direction.y * _currentSpeed);
     }
 
     public void OnMove(Vector2 direction)
@@ -29,5 +40,15 @@ public class Movement : MonoBehaviour
     public void OnStopMove()
     {
         _isMoving = false;
+    }
+
+    public void OnDrag()
+    {
+        _currentSpeed = draggingSpeed;
+    }
+
+    public void OnStopDrag()
+    {
+        _currentSpeed = originSpeed;
     }
 }
