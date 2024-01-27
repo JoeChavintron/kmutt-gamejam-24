@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class InputManager : MonoBehaviour
+public class MovmentInputManager : MonoBehaviour
 {
     [field: SerializeField]
     private UnityEvent<Vector2> moveEvent;
