@@ -48,4 +48,9 @@ public class DrawLineController : MonoBehaviour
     void createEndOfObject() {
         Instantiate(prefab, player.transform.position, Quaternion.identity);
     }
+
+    public void StopDraw() {
+        isDraw = false;
+        line.positionCount = 0;
+    }
 }

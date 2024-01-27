@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour
 
     public void OnDrag()
     {
-        _currentSpeed = draggingSpeed;
+        // _currentSpeed = draggingSpeed;
         drawLineController.StartDraw();
     }
 
@@ -56,6 +56,7 @@ public class Movement : MonoBehaviour
     {
         Debug.Log("stop drag");
         _currentSpeed = originSpeed;
-        drawLineController.isDraw = false;
+        drawLineController.StopDraw();
+        Destroy(GameObject.FindGameObjectsWithTag("Dummy")[0]);
     }
 }
