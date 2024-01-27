@@ -5,6 +5,10 @@ using UnityEngine.Serialization;
 
 public class Movement : MonoBehaviour
 {
+
+    [field: SerializeField]
+    public DrawLineController drawLineController;
+
     private bool _isMoving;
     private Vector2 _direction;
 
@@ -45,10 +49,12 @@ public class Movement : MonoBehaviour
     public void OnDrag()
     {
         _currentSpeed = draggingSpeed;
+        drawLineController.isDraw = true;
     }
 
     public void OnStopDrag()
     {
         _currentSpeed = originSpeed;
+        drawLineController.isDraw = false;
     }
 }

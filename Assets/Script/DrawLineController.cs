@@ -17,22 +17,26 @@ public class DrawLineController : MonoBehaviour
     private Vector3 previousPosition;
 
     // Start is called before the first frame update
-    private void Start()
-    {
-        line = GetComponent<LineRenderer>();
-        createEndOfObject();
+
+    // Update is called once per frame
+    public bool isDraw;
+
+
+    public void StartDraw() {
         previousPosition = player.transform.position;
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        drawLine();
+    private void Update() {
+        DrawLine();
     }
 
-    void drawLine() {
+    public void DrawLine() {
+        if (isDraw == false) {
+            return;
+        }
+        line = GetComponent<LineRenderer>();
+        // createEndOfObject();
         Vector3 currentPosition = player.transform.position;
-        
         if (Vector3.Distance(currentPosition, previousPosition) > minDistance) {
             
             line.positionCount++;
