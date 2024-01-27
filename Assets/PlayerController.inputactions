@@ -7,19 +7,19 @@
             "actions": [
                 {
                     "name": "Movement",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "83187e76-e78b-4d6d-b4a7-4fb1f771daa7",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "WASD",
                     "id": "11ddc374-2973-45c7-ab14-c6f29518de7a",
-                    "path": "ButtonWithOneModifier",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -28,7 +28,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Button",
+                    "name": "Up",
                     "id": "b42cb00b-f6df-472a-b9de-dfc3d2811f09",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
@@ -39,7 +39,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Button",
+                    "name": "Down",
                     "id": "15535d0f-e7c1-4418-b117-f43493f181af",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
@@ -50,7 +50,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Button",
+                    "name": "Left",
                     "id": "8dfba75b-6c08-4c61-82d5-66e7045e9d64",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
@@ -61,7 +61,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Button",
+                    "name": "Right",
                     "id": "ae72ae9f-d915-4a6e-8681-c307c582eca0",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
