@@ -23945,7 +23945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawLineController: {fileID: 383912105}
   originSpeed: 10
-  draggingSpeed: 2
+  draggingSpeed: 4
   body: {fileID: 383912102}
 --- !u!1 &885104337
 GameObject:
